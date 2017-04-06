@@ -1,8 +1,10 @@
 # QBImagePicker
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+forked from [questbeat/QBImagePicker](https://github.com/questbeat/QBImagePicker)
 
 A clone of UIImagePickerController with multiple selection support.
+
+Update check mark style for private using.
 
 ![screenshot01.png](screenshot01.png)
 ![screenshot02.png](screenshot02.png)
@@ -34,7 +36,7 @@ A clone of UIImagePickerController with multiple selection support.
     imagePickerController.allowsMultipleSelection = YES;
     imagePickerController.maximumNumberOfSelection = 6;
     imagePickerController.showsNumberOfSelectedAssets = YES;
-
+    
     [self presentViewController:imagePickerController animated:YES completion:NULL];
 
 
@@ -43,16 +45,9 @@ A clone of UIImagePickerController with multiple selection support.
 
 ### CocoaPods
 
-1. Add `pod "QBImagePickerController"` to Podfile
+1. Add `pod 'QBImagePickerController', :git => 'https://github.com/gknows/QBImagePicker.git', :branch => 'master'` to Podfile
 2. Run `pod install`
 3. Add `#import <QBImagePickerController/QBImagePickerController.h>` to your code
-
-
-### Carthage
-
-1. Add `github "questbeat/QBImagePicker"` to Cartfile
-2. Run `carthage update`
-3. Add `#import <QBImagePicker/QBImagePicker.h>` to your code
 
 
 
@@ -82,7 +77,7 @@ This method will be called when the user finishes picking assets.
         for (PHAsset *asset in assets) {
             // Do something with the asset
         }
-
+    
         [self dismissViewControllerAnimated:YES completion:NULL];
     }
 
